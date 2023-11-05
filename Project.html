@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&E Cafe</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">A&E Cafe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="project.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="italian.html">Italian</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Chinese.html">Chinese</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="welcome">
+        <h1>
+            Welcome to A&E Cafe
+        </h1>
+
+        <p>Taste Matters</p>
+    </div>
+   
+      <div class="card" id="animatedCard">
+    
+    <div class="card-body">
+        <h5 class="card-title">New Year's Special!</h5>
+        <p class="card-text">Enjoy a 10% discount on our exclusive New Year's menu.</p>
+        <a href="order.html" class="btn btn-primary">Order Now</a>
+    </div>
+</div>
+
+
+    <div class="introduction">
+        <p> Welcome to A&E Cafe, where every cup tells a story. Explore our menu crafted with passion, savor artisanal coffee, and indulge in delectable pastries. At our cafe, we blend cozy ambiance with exceptional flavors to create unforgettable moments. Join us for a delightful journey in the world of taste and warmth. Your perfect coffee experience awaits.</p>
+    </div>
+
+     <footer class="footer fixed-bottom bg-dark text-white">
+        <p class="float-left">Contact: +1234567890</p>
+        <p class="float-right"> <i class="fa-solid fa-location-dot" ></i> ABC Street Astana, Kazakhstan</p>
+    </footer>
+
+
+   <script>
+        
+        const animatedCard = document.getElementById('animatedCard');
+        let isMovingUp = true;
+        let topPosition = 0;
+
+        function moveCard() {
+            const deltaY = isMovingUp ? -20 : 20; // 
+
+            topPosition += deltaY;
+            animatedCard.style.transform = `translateY(${topPosition}px)`;
+            isMovingUp = !isMovingUp;
+        }
+
+        setInterval(moveCard, 2000);
+    </script>
+</body>
+</html>

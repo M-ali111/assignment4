@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Foods</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('pizza.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        .intro h1 {
+            text-align: center;
+            color: white;
+            font-style: italic;
+            padding-top: 50px;
+        }
+         .table thead th,
+        .table tbody tr td {
+            color: white;
+        }
+     
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">A&E Cafe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="project.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="italian.html">Italian</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Chinese.html">Chinese</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container">
+        <div class="intro">
+            <h1>Benvenuti! Experience the Taste of Italy.</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="italian">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Spaghetti Carbonara</td>
+                        <td>Spaghetti with creamy egg and pancetta sauce.</td>
+                        <td>$12.99</td>
+                    </tr>
+                    <tr>
+                        <td>Margherita Pizza</td>
+                        <td>Tomato, mozzarella, and fresh basil.</td>
+                        <td>$10.99</td>
+                    </tr>
+                    <tr>
+                        <td>Lasagna</td>
+                        <td>Layers of pasta, ricotta cheese, and meat sauce.</td>
+                        <td>$14.99</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Parmesan</td>
+                        <td>Breaded chicken breast with marinara and cheese.</td>
+                        <td>$15.99</td>
+                    </tr>
+                    <tr>
+                        <td>Tiramisu</td>
+                        <td>Classic Italian dessert with coffee and mascarpone.</td>
+                        <td>$7.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-primary"><a href="order.html" style="color: white; text-decoration: none;">Order Now</a></button>
+    </div>
+
+    <footer class="footer fixed-bottom bg-dark text-white">
+        <p class="float-left">Contact: +1234567890</p>
+        <p class="float-right"> <i class="fa-solid fa-location-dot" ></i> ABC Street Astana, Kazakhstan</p>
+    </footer>
+
+   
+<script>
+
+function hoverButton() {
+  document.querySelector(".btn-primary a").textContent = "Click to Order";
+}
+
+
+document.querySelector(".btn-primary").addEventListener("mouseover", hoverButton);
+
+</script>
+
+
+</body>
+</html>

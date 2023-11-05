@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Foods</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('Chinese.jpg');
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: cover;
+        }
+        .ch_intro h1 {
+            text-align: center;
+            color: white;
+            font-style: italic;
+        }
+        .table thead th,
+        .table tbody tr td {
+            color: white;
+        }
+        .item-description {
+            display: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">A&E Cafe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="project.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="italian.html">Italian</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Chinese.html">Chinese</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+    <div class="container">
+        <div class="ch_intro">
+            <h1>欢迎! Savor the Richness of 中国菜 (Chinese Cuisine).</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="Chinese">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="menu-item">
+                        <td>Hot and Sour Soup</td>
+                        <td class="item-description">Spicy soup with mushrooms, tofu, and bamboo shoots.</td>
+                        <td>$6.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>General Tso's Chicken</td>
+                        <td class="item-description">Deep-fried chicken in a sweet and spicy sauce.</td>
+                        <td>$12.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Beef with Broccoli</td>
+                        <td class="item-description">Sliced beef stir-fried with broccoli in oyster sauce.</td>
+                        <td>$11.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Shrimp Fried Rice</td>
+                        <td class="item-description">Stir-fried rice with shrimp, vegetables, and soy sauce.</td>
+                        <td>$10.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Vegetable Lo Mein</td>
+                        <td class="item-description">Stir-fried egg noodles with mixed vegetables.</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Spring Rolls (2 pieces)</td>
+                        <td class="item-description">Crispy rolls filled with vegetables and served with dipping sauce.</td>
+                        <td>$3.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Mongolian Beef</td>
+                        <td class="item-description">Beef, green onions, and garlic stir-fried in a savory sauce.</td>
+                        <td>$13.99</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Kung Pao Chicken</td>
+                        <td class="item-description">Chicken, peanuts, and vegetables in a spicy sauce.</td>
+                        <td>$11.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-primary"><a href="order.html" style="color: white; text-decoration: none;">Order Now</a></button>
+    </div>
+
+   <footer class="footer fixed-bottom bg-dark text-white">
+        <p class="float-left">Contact: +1234567890</p>
+        <p class="float-right"> <i class="fa-solid fa-location-dot" ></i> ABC Street Astana, Kazakhstan</p>
+    </footer>
+
+    <script>
+      
+        function showItemDetails(event) {
+            const item = event.currentTarget;
+            const description = item.querySelector('.item-description');
+            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+        }
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach((item) => {
+            item.addEventListener('click', showItemDetails);
+        });
+function hoverButton() {
+  document.querySelector(".btn-primary a").textContent = "Click to Order";
+}
+
+function playSound() {
+  var audio = new Audio("order_now.mp3");
+  audio.play();
+}
+const audio = new Audio('order_now.mp3');
+audio.volume = 0.9; 
+audio.play();
+document.querySelector(".btn-primary").addEventListener("mouseover", hoverButton);
+document.querySelector(".btn-primary").addEventListener("click", playSound);
+       
+        document.querySelector('.btn-primary a').addEventListener('click', orderNow);
+    </script>
+</body>
+</html>
